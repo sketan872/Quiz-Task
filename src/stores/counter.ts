@@ -17,7 +17,6 @@ export const userpiniaStore = defineStore('score', () => {
   const addscore = (score: number) => {
     user.result.push(score)
   }
-
   return { user, login, addscore };
 
 })

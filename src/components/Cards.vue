@@ -25,12 +25,12 @@
                     </div>
 
                 </div>
-                <!-- <p v-if="q.questionId==count" :v-model="currvalue">{{ q.correctOptionId }}</p> -->
+               
             </div>
 
         </div>
         <button :disabled="count == 9 ? true : false" v-if="count < 9" @click="Loophandle"
-            class="border h-[40px] p-2 relative top-[480px] fixed left-[-200px] cursor-pointer text-white bg-violet-400 hover:bg-violet-500  ">
+            class="border h-[40px] p-2  top-[480px] relative left-[-200px] cursor-pointer text-white bg-violet-400 hover:bg-violet-500  ">
             Next
         </button>
         <button @click="storedvalue" v-if="count == 9"
@@ -52,50 +52,68 @@
         </div>
     </div>
 </template>
-
 <script setup lang="ts">
-import { inject, ref, watch } from 'vue';
+import { ref } from 'vue';
 import TimerBar from '../components/TimerBar.vue';
 import { userpiniaStore } from '../stores/counter';
-let { user, addscore } = userpiniaStore();
-// import TimerBar from '../components/TimerBar.vue';
-const props = defineProps({
-    question: Array,
-});
 
-let count = ref<number>(0)
-let score: number = 0;
-let answer = ref<string>('')
-let i = ref<number>(0);
-const Loophandle = (() => {
-    if (count.value < 10) {
-        i.value += 1;
+const { user, addscore } = userpiniaStore();
 
-        count.value += 1;
-    }
-    if (answer.value == props.question.questions[i.value - 1].correctOptionId) {
-        score += 1
-    }
 
-    answer.value = ''
+interface Option {
+  optionId: string;
+  text: string;
+}
 
-})
+interface QuizQuestion {
+  questionId: number;
+  questionText: string;
+  questionType: string;
+  options: Option[];
+  correctOptionId: string;
+}
+
+interface QuestionProp {
+  questions: QuizQuestion[];
+}
+
+
+const props = defineProps<{ question: QuestionProp }>();
+
+
+const count = ref<number>(0);
+let score = 0;
+const answer = ref<string>('');
+const i = ref<number>(0);
+const display = ref<string>('');
+
+
+const Loophandle = () => {
+  if (count.value < 10) {
+    i.value += 1;
+    count.value += 1;
+  }
+
+  const currentQuestion = props.question.questions[i.value - 1];
+  if (currentQuestion && answer.value === currentQuestion.correctOptionId) {
+    score += 1;
+  }
+
+  answer.value = '';
+};
+
 
 function handleTimeout() {
-    count.value++;
+  count.value++;
 }
-let display = ''
+
 function storedvalue() {
+  addscore(score);
 
-    addscore(score);
-    if (count.value < 10) {
-        count.value += 1
-    }
+  if (count.value < 10) {
+    count.value += 1;
+  }
 
-    display = 'Completed Your Score is ' + String(score)
+  display.value = 'Completed! Your Score is ' + String(score);
 }
-
-
 </script>
-
-<style></style>
