@@ -1,0 +1,131 @@
+{
+  "posts": [
+    {
+      "quizTitle": "General Knowledge Quiz",
+      "quizId": "gk_quiz_001",
+      "description": "A short quiz to test your general knowledge skills.",
+      "questions": [
+        {
+          "questionId": "0",
+          "questionText": "What is the capital of France?",
+          "questionType": "multiple_choice",
+          "options": [
+            { "optionId": "a", "text": "Berlin" },
+            { "optionId": "b", "text": "Madrid" },
+            { "optionId": "c", "text": "Paris" },
+            { "optionId": "d", "text": "Rome" }
+          ],
+          "correctOptionId": "c"
+        },
+        {
+          "questionId": "1",
+          "questionText": "Which planet is known as the Red Planet?",
+          "questionType": "multiple_choice",
+          "options": [
+            { "optionId": "a", "text": "Mars" },
+            { "optionId": "b", "text": "Jupiter" },
+            { "optionId": "c", "text": "Venus" },
+            { "optionId": "d", "text": "Saturn" }
+          ],
+          "correctOptionId": "a"
+        },
+        {
+          "questionId": "2",
+          "questionText": "Who wrote 'Hamlet'?",
+          "questionType": "multiple_choice",
+          "options": [
+            { "optionId": "a", "text": "Charles Dickens" },
+            { "optionId": "b", "text": "Leo Tolstoy" },
+            { "optionId": "c", "text": "William Shakespeare" },
+            { "optionId": "d", "text": "Mark Twain" }
+          ],
+          "correctOptionId": "c"
+        },
+        {
+          "questionId": "3",
+          "questionText": "What is the largest mammal in the world?",
+          "questionType": "multiple_choice",
+          "options": [
+            { "optionId": "a", "text": "Elephant" },
+            { "optionId": "b", "text": "Blue Whale" },
+            { "optionId": "c", "text": "Giraffe" },
+            { "optionId": "d", "text": "Hippopotamus" }
+          ],
+          "correctOptionId": "b"
+        },
+        {
+          "questionId": "4",
+          "questionText": "Which country is known for inventing pizza?",
+          "questionType": "multiple_choice",
+          "options": [
+            { "optionId": "a", "text": "France" },
+            { "optionId": "b", "text": "Italy" },
+            { "optionId": "c", "text": "Greece" },
+            { "optionId": "d", "text": "Turkey" }
+          ],
+          "correctOptionId": "b"
+        },
+        {
+          "questionId": "5",
+          "questionText": "What is the chemical symbol for gold?",
+          "questionType": "multiple_choice",
+          "options": [
+            { "optionId": "a", "text": "Ag" },
+            { "optionId": "b", "text": "Au" },
+            { "optionId": "c", "text": "Gd" },
+            { "optionId": "d", "text": "Go" }
+          ],
+          "correctOptionId": "b"
+        },
+        {
+          "questionId": "6",
+          "questionText": "How many continents are there on Earth?",
+          "questionType": "multiple_choice",
+          "options": [
+            { "optionId": "a", "text": "5" },
+            { "optionId": "b", "text": "6" },
+            { "optionId": "c", "text": "7" },
+            { "optionId": "d", "text": "8" }
+          ],
+          "correctOptionId": "c"
+        },
+        {
+          "questionId": "7",
+          "questionText": "Which language has the most native speakers in the world?",
+          "questionType": "multiple_choice",
+          "options": [
+            { "optionId": "a", "text": "English" },
+            { "optionId": "b", "text": "Hindi" },
+            { "optionId": "c", "text": "Spanish" },
+            { "optionId": "d", "text": "Mandarin Chinese" }
+          ],
+          "correctOptionId": "d"
+        },
+        {
+          "questionId": "8",
+          "questionText": "What is the boiling point of water at sea level in Celsius?",
+          "questionType": "multiple_choice",
+          "options": [
+            { "optionId": "a", "text": "90°C" },
+            { "optionId": "b", "text": "95°C" },
+            { "optionId": "c", "text": "100°C" },
+            { "optionId": "d", "text": "105°C" }
+          ],
+          "correctOptionId": "c"
+        },
+        {
+          "questionId": "9",
+          "questionText": "Which famous scientist developed the theory of general relativity?",
+          "questionType": "multiple_choice",
+          "options": [
+            { "optionId": "a", "text": "Isaac Newton" },
+            { "optionId": "b", "text": "Albert Einstein" },
+            { "optionId": "c", "text": "Galileo Galilei" },
+            { "optionId": "d", "text": "Marie Curie" }
+          ],
+          "correctOptionId": "b"
+        }
+      ]
+    }
+  ]
+}
