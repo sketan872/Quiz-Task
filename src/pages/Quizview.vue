@@ -1,6 +1,6 @@
 <template>
     <div class="truncate">
- <Quiz/>
+        <Quiz />
     </div>
 </template>
 <script setup>

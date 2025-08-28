@@ -25,10 +25,7 @@
             <td class="py-2 px-4 border-b capitalize">{{ entry.score }}/10</td>
             <td class="py-2 px-4 border-b">
               <div class="w-full bg-gray-300 rounded h-5">
-                <div
-                  class="bg-green-500 h-5 rounded"
-                  :style="{ width: (entry.score * 10) + '%' }"
-                ></div>
+                <div class="bg-green-500 h-5 rounded" :style="{ width: (entry.score * 10) + '%' }"></div>
               </div>
             </td>
           </tr>
@@ -42,7 +39,7 @@
 
 
 <script setup lang="ts">
-import { userpiniaStore } from '../stores/counter';
+import { userpiniaStore } from '../stores/store';
 
 interface LeaderboardEntry {
   name: string;

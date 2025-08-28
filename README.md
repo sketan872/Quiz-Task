@@ -23,6 +23,7 @@ npm install
 ### Compile and Hot-Reload for Development
 
 ```sh
+first run this command -> npx json-server db.json in another terminal of vs code
 npm run dev
 ```
 

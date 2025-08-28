@@ -5,6 +5,9 @@ interface user {
   name: string[],
   result: number[],
 }
+
+
+// Here we stored name inside nameArray[] ,score inside result array
 export const userpiniaStore = defineStore('score', () => {
 
   let user = reactive<user>({
@@ -18,7 +21,6 @@ export const userpiniaStore = defineStore('score', () => {
     user.result.push(score)
   }
   return { user, login, addscore };
-
 })
 
 
